@@ -1,0 +1,17 @@
+pre-commit:
+  commands:
+    lint:
+      glob: "*.{js,ts,cjs,mjs}"
+      run: pnpm oxlint --fix {staged_files}
+      stage_fixed: true
+    format:
+      glob: "*.{js,ts,cjs,mjs,json}"
+      run: pnpm oxfmt --write {staged_files}
+      stage_fixed: true
+    typecheck:
+      run: pnpm tsc --noEmit
+
+pre-push:
+  commands:
+    test:
+      run: pnpm test
