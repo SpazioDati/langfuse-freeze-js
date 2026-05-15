@@ -1,0 +1,32 @@
+{
+    "name": "langfuse-freeze-js",
+    "version": "0.1.0",
+    "type": "module",
+    "description": "",
+    "main": "./dist/main.js",
+    "types": "./dist/main.d.ts",
+    "exports": {
+        ".": {
+            "import": "./dist/main.js",
+            "types": "./dist/main.d.ts"
+        }
+    },
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "tsc",
+        "typecheck": "tsc --noEmit",
+        "test": "vitest run --config vitest.unit.config.ts",
+        "test:watch": "vitest --config vitest.unit.config.ts",
+        "lint": "oxlint src",
+        "format": "oxfmt --write src"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "MIT",
+    "packageManager": "pnpm@10.33.0",
+    "dependencies": {
+        "vitest": "^4.1.6"
+    }
+}
