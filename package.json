@@ -3,43 +3,45 @@
   "version": "0.1.0",
   "type": "module",
   "author": {
-	"name": "Gabriele Ghisleni",
-	"email": "gabriele.ghisleni01@gmail.com",
-	"url": "https://github.com/GabrieleGhisleni"
+    "name": "Gabriele Ghisleni",
+    "email": "gabriele.ghisleni01@gmail.com",
+    "url": "https://github.com/GabrieleGhisleni"
   },
   "description": "Wraps the Langfuse client to snapshot prompts to disk at startup. If Langfuse is unreachable at runtime, the local backup is used as fallback.",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "bin": {
-	"langfuse-freeze": "./dist/cli.js"
+    "langfuse-freeze": "./dist/cli.js"
   },
   "exports": {
-	".": {
-	  "import": "./dist/index.js",
-	  "types": "./dist/index.d.ts"
-	}
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
   },
   "files": [
-	"dist"
+    "dist"
   ],
   "scripts": {
-	"build": "tsc",
-	"typecheck": "tsc --noEmit",
-	"test": "vitest run --config vitest.unit.config.ts",
-	"test:watch": "vitest --config vitest.unit.config.ts",
-	"test:e2e": "vitest run --config vitest.e2e.config.ts",
-	"lint": "oxlint src",
-	"format": "oxfmt --write src"
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run --config vitest.unit.config.ts",
+    "test:watch": "vitest --config vitest.unit.config.ts",
+    "test:e2e": "vitest run --config vitest.e2e.config.ts",
+    "lint": "oxlint src",
+    "format": "oxfmt --write src"
   },
   "keywords": [],
   "license": "MIT",
   "packageManager": "pnpm@10.33.0",
   "dependencies": {
-	"@langfuse/client": "^5.0.0",
-	"vitest": "^4.1.6"
+    "@langfuse/client": "^5.0.0",
+    "vitest": "^4.1.6"
   },
   "devDependencies": {
-	"@types/node": "^25.8.0",
-	"typescript": "^6.0.3"
+    "@types/node": "^25.8.0",
+    "oxfmt": "^0.49.0",
+    "oxlint": "^1.64.0",
+    "typescript": "^6.0.3"
   }
 }
