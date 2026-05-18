@@ -17,5 +17,8 @@
         "isolatedModules": true
     },
     "include": ["src"],
-    "exclude": ["node_modules", "dist", "vitest.config.ts", "vitest.unit.config.ts"]
+    "exclude": [
+        "node_modules", "dist", "vitest.config.ts", "vitest.unit.config.ts",
+        "**/*.test.ts", "**/*.spec.ts", "**/__tests__"
+    ]
 }
